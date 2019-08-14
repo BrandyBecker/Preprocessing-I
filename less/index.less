@@ -201,13 +201,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  background-color: @softrose;
+  //   background-color: @softrose;
+  background: linear-gradient(100deg, @softrose 50%, #f6cfca 50%);
 }
 
 .container-wrapper {
   text-align: center;
+  opacity: 0.95;
   color: white;
-  opacity: 0.68;
   margin-bottom: 15%;
 
   img {
@@ -216,6 +217,7 @@ body {
     border: 3px dashed @dustyrose;
     margin-top: 2.5%;
     margin-bottom: 5%;
+
     @media (max-width: 500px) {
       width: 500px;
       margin-bottom: 0%;
