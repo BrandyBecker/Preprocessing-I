@@ -361,5 +361,80 @@ footer {
   color: #eabfb9;
   padding: 2.5%;
   font-size: 1rem;
+  font-family: "Lobster", cursive;
 }
-/* ---------------------------- Text over Image ^^^^-------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------- */
+.contactInfo {
+  margin-top: 5%;
+  text-align: center;
+  font-family: "Lobster", cursive;
+}
+.contactInfo h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #b86b77;
+}
+#yourName {
+  height: 40px;
+  width: 75%;
+  border-radius: 5px;
+  outline: none;
+  border: 3px dashed #b86b77;
+  text-align: center;
+  background-color: #f4f3f4;
+  font-size: 20px;
+  font-family: "Blinker", "Sans-Serif";
+  opacity: 0.5;
+  resize: none;
+  font-family: "Lobster", cursive;
+}
+#yourEmail {
+  height: 40px;
+  width: 75%;
+  border-radius: 5px;
+  outline: none;
+  border: 3px dashed #b86b77;
+  text-align: center;
+  background-color: #f4f3f4;
+  font-size: 20px;
+  font-family: "Blinker", "Sans-Serif";
+  opacity: 0.5;
+  margin-top: 15px;
+  resize: none;
+  font-family: "Lobster", cursive;
+}
+#yourMessage {
+  height: 200px;
+  width: 75%;
+  border-radius: 5px;
+  outline: none;
+  border: 3px dashed #b86b77;
+  text-align: center;
+  background-color: #f4f3f4;
+  font-size: 20px;
+  font-family: "Blinker", "Sans-Serif";
+  opacity: 0.5;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  resize: none;
+  font-family: "Lobster", cursive;
+}
+.submitContact {
+  border: 3px dashed #b86b77;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-color: #eabfb9;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: "Lobster", cursive;
+}
+.submitContact:focus {
+  background-color: #b86b77;
+  color: white;
+  outline: 0;
+}
