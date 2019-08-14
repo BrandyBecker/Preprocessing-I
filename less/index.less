@@ -4,56 +4,372 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1.5;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+/* ---------------------------------------------------------- */
+
+/* 
+font-family: 'Lobster', cursive;
+font-family: 'Lexend Mega', sans-serif;
+ */
+
+//  ------ Variables ----------------------
+// one thing to store ----------------------
+
+// ---- Fonts
+@Lexend: "Lexend Mega", sans-serif;
+@Lobster: "Lobster", cursive;
+@Cata: "Catamaran", sans-serif;
+@Poppins: "Poppins", sans-serif;
+
+// ---- Colors
+
+@dustyrose: #b86b77;
+@dustyishrose: #c78a93;
+@rose: #eabfb9;
+@rosepetal: #f6cfca;
+@softrose: #ffe8e5;
+
+// ------- Mix ins -------------------------
+//multiple things to store -------------------
+
+.boxdeco() {
+  background-color: @rose;
+  border: 3px dashed @dustyishrose;
+  padding: 2% 1%;
+  width: 25%;
+  height: 625px;
+  text-align: center;
+  @media (max-width: 500px) {
+    height: 150px;
+    width: 500px;
+    margin-bottom: 2.5%;
+  }
+}
+
+.aboutinfodeco() {
+  background-color: @rose;
+  border: 3px dashed @dustyishrose;
+  padding: 2.5%;
+  width: 75%;
+  text-align: center;
+}
+
+// ----------------------------------------
+// ----------------------------------------
+
+body {
+  font-size: 67.5%;
+}
+
+.container {
+  border: 1px solid @rosepetal;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: @softrose;
+}
+
+.container-wrapper {
+  text-align: center;
+  color: white;
+  opacity: 0.68;
+  margin-bottom: 15%;
+
+  img {
+    width: 750px;
+    border-radius: 50%;
+    border: 3px dashed @dustyrose;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    @media (max-width: 500px) {
+      width: 500px;
+      margin-bottom: 0%;
+    } //closes img media tag
+  } //closes container-wrapper img
+  h2 {
+    font-size: 2.25rem;
+    @media (max-width: 500px) {
+      margin-top: 10%;
+      color: @dustyrose;
+    }
+  } //closes container-wrapper h2
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: -5%;
+    @media (max-width: 500px) {
+      color: @dustyishrose;
+    }
+  } //closes container-wrapper h3
+} //closes container-wrapper
+
+.text-wrapper {
+  left: 50%;
+  top: 50%;
+  font-size: 5rem;
+  font-family: @Lobster;
+  width: 100%;
+  margin-top: -28.5%;
+  text-shadow: 5px 5px 10px @dustyrose;
+}
+
+nav {
+  background-color: @rosepetal;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.25rem;
+
+  a {
+    text-decoration: none;
+    font-family: @Poppins;
+    color: @dustyishrose;
+  } //closes the nav a tag
+} //closes the nav tag
+
+.aboutinfo {
+  font-size: 1.5rem;
+  font-family: @Poppins;
+  margin-left: 12.5%;
+  margin-bottom: 3%;
+  @media (max-width: 500px) {
+    font-size: 1.25rem;
+  }
+  .aboutinfodeco();
+  p {
+    color: white;
+    text-shadow: 1px 1px 1px @dustyrose;
+  } //close p tag
+} //close aboutinfo p
+
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
+  img {
+    border-radius: 50%;
+    height: 350px;
+    object-fit: cover;
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  .boxTitle {
+    font-size: 2.5rem;
+    font-family: @Poppins;
+    color: @dustyrose;
+    text-shadow: 2px 2px 2px @dustyishrose;
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+  }
+
+  .boxText {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-left: 18%;
+    font-family: @Poppins;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px @dustyrose;
+    @media (max-width: 500px) {
+      font-size: 1rem;
+      margin-left: 32.5%;
+    }
+  }
+
+  .boxText2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 0%;
+    font-family: @Poppins;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px @dustyrose;
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+  }
+
+  .boxText3 {
+    font-size: 1.4rem;
+    text-align: Left;
+
+    margin-left: 10%;
+    font-family: @Poppins;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px @dustyrose;
+    @media (max-width: 500px) {
+      font-size: 1rem;
+      margin-left: 30%;
+    }
+  }
+
+  .box1 {
+    .boxdeco();
+    .boximg1 {
+      width: 100%;
+    } //closes boximg
+  } //closes box1
+  .box2 {
+    .boxdeco();
+    .boximg2 {
+      width: 100%;
+    } //closes boximg
+  } //closes box 2
+  .box3 {
+    .boxdeco();
+    .boximg3 {
+      width: 100%;
+    } //closes boximg
+  } //closes box3
+} //closes boxes
+
+footer {
+  text-align: center;
+  color: @rose;
+  padding: 2.5%;
+  font-size: 1rem;
+}
+
+/* ---------------------------- Text over Image ^^^^-------------------------------------- */

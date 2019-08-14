@@ -1,1 +1,365 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.5;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* ---------------------------------------------------------- */
+/* 
+font-family: 'Lobster', cursive;
+font-family: 'Lexend Mega', sans-serif;
+ */
+body {
+  font-size: 67.5%;
+}
+.container {
+  border: 1px solid #f6cfca;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: #ffe8e5;
+}
+.container-wrapper {
+  text-align: center;
+  color: white;
+  opacity: 0.68;
+  margin-bottom: 15%;
+}
+.container-wrapper img {
+  width: 750px;
+  border-radius: 50%;
+  border: 3px dashed #b86b77;
+  margin-top: 2.5%;
+  margin-bottom: 5%;
+}
+@media (max-width: 500px) {
+  .container-wrapper img {
+    width: 500px;
+    margin-bottom: 0%;
+  }
+}
+.container-wrapper h2 {
+  font-size: 2.25rem;
+}
+@media (max-width: 500px) {
+  .container-wrapper h2 {
+    margin-top: 10%;
+    color: #b86b77;
+  }
+}
+.container-wrapper h3 {
+  font-size: 1.5rem;
+  margin-bottom: -5%;
+}
+@media (max-width: 500px) {
+  .container-wrapper h3 {
+    color: #c78a93;
+  }
+}
+.text-wrapper {
+  left: 50%;
+  top: 50%;
+  font-size: 5rem;
+  font-family: "Lobster", cursive;
+  width: 100%;
+  margin-top: -28.5%;
+  text-shadow: 5px 5px 10px #b86b77;
+}
+nav {
+  background-color: #f6cfca;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+nav a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #c78a93;
+}
+.aboutinfo {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin-left: 12.5%;
+  margin-bottom: 3%;
+  background-color: #eabfb9;
+  border: 3px dashed #c78a93;
+  padding: 2.5%;
+  width: 75%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .aboutinfo {
+    font-size: 1.25rem;
+  }
+}
+.aboutinfo p {
+  color: white;
+  text-shadow: 1px 1px 1px #b86b77;
+}
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .boxes {
+    flex-direction: column;
+  }
+}
+.boxes img {
+  border-radius: 50%;
+  height: 350px;
+  object-fit: cover;
+}
+@media (max-width: 500px) {
+  .boxes img {
+    display: none;
+  }
+}
+.boxes .boxTitle {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #b86b77;
+  text-shadow: 2px 2px 2px #c78a93;
+}
+@media (max-width: 500px) {
+  .boxes .boxTitle {
+    font-size: 1rem;
+  }
+}
+.boxes .boxText {
+  font-size: 1.4rem;
+  text-align: left;
+  margin-left: 18%;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #b86b77;
+}
+@media (max-width: 500px) {
+  .boxes .boxText {
+    font-size: 1rem;
+    margin-left: 32.5%;
+  }
+}
+.boxes .boxText2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 0%;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #b86b77;
+}
+@media (max-width: 500px) {
+  .boxes .boxText2 {
+    font-size: 1rem;
+  }
+}
+.boxes .boxText3 {
+  font-size: 1.4rem;
+  text-align: Left;
+  margin-left: 10%;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #b86b77;
+}
+@media (max-width: 500px) {
+  .boxes .boxText3 {
+    font-size: 1rem;
+    margin-left: 30%;
+  }
+}
+.boxes .box1 {
+  background-color: #eabfb9;
+  border: 3px dashed #c78a93;
+  padding: 2% 1%;
+  width: 25%;
+  height: 625px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .boxes .box1 {
+    height: 150px;
+    width: 500px;
+    margin-bottom: 2.5%;
+  }
+}
+.boxes .box1 .boximg1 {
+  width: 100%;
+}
+.boxes .box2 {
+  background-color: #eabfb9;
+  border: 3px dashed #c78a93;
+  padding: 2% 1%;
+  width: 25%;
+  height: 625px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .boxes .box2 {
+    height: 150px;
+    width: 500px;
+    margin-bottom: 2.5%;
+  }
+}
+.boxes .box2 .boximg2 {
+  width: 100%;
+}
+.boxes .box3 {
+  background-color: #eabfb9;
+  border: 3px dashed #c78a93;
+  padding: 2% 1%;
+  width: 25%;
+  height: 625px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .boxes .box3 {
+    height: 150px;
+    width: 500px;
+    margin-bottom: 2.5%;
+  }
+}
+.boxes .box3 .boximg3 {
+  width: 100%;
+}
+footer {
+  text-align: center;
+  color: #eabfb9;
+  padding: 2.5%;
+  font-size: 1rem;
+}
+/* ---------------------------- Text over Image ^^^^-------------------------------------- */
